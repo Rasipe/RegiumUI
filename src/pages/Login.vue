@@ -1,9 +1,9 @@
 <template>
   <q-page>
     <h1>Regium</h1>
-    <div id="form">
+    <div class="form">
       <q-form class="q-gutter-md">
-        <q-input dark outlined v-model="text" label="usuario" color="yellow" type="text" />
+        <q-input dark outlined v-model="text" label="usuario" color="yellow" type="text"/>
         <q-input dark outlined v-model="password" type="password" label="Senha" color="yellow" />
         <q-input
             dark
@@ -57,16 +57,11 @@ export default {
   },
   methods: {
     onSubmit() {
-      this.$router.push({ path: '/Index' });
+      this.$router.push({ path: '/MainMenu' });
     },
   },
 };
 </script>
 
 <style>
-#form {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 50px;
-    padding-right: 15px;
-}
 </style>

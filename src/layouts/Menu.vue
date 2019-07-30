@@ -17,4 +17,9 @@ export default {
 </script>
 
 <style>
+.form {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    padding-right: 15px;
+}
 </style>
