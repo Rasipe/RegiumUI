@@ -1,34 +1,129 @@
 <template>
   <q-page class="absolute-full form">
-    <div class="col q-gutter-md">
-      <div class="row q-gutter-md">
-        <div class="col">
-            <q-item  class="q-py-lg save" clickable>
-              <q-item-section>
-                <q-item-label class="q-pb-sm">Nome do protagonista</q-item-label>
-                <q-item-label class="q-py-xs">Level</q-item-label>
-                <q-item-label class="q-pt-sm">Dias</q-item-label>
-              </q-item-section>
-            </q-item>
-        </div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-      </div>
+    <q-btn
+      flat
+      dense
+      round
+      aria-label="Back"
+      @click="back()"
+      class="q-mb-md"
+      >
+        <q-icon name="arrow_back" size="300%"/>
+    </q-btn>
+    <q-scroll-area
+        class="full-width full-height"
+      >
+    <div class="row q-gutter-md flex flex-center">
+        <r-save
+         v-for="(save, index) in saves"
+        :key="index"
+        :days="save.days"
+        :level="save.level"
+        :name="save.name"
+        @load="back"
+        />
     </div>
+    </q-scroll-area>
   </q-page>
 </template>
 
 <script>
+import RSave from '../components/RSave.vue';
+
 export default {
   name: 'Load',
+  components: {
+    RSave,
+  },
+  data() {
+    return {
+      saves: [
+        {
+          name: 'Protagonista',
+          days: 5,
+          level: 2,
+        },
+        {
+          name: 'Protagonista2',
+          days: 5,
+          level: 2,
+        },
+        {
+          name: 'Protagonista3',
+          days: 5,
+          level: 2,
+        },
+        {
+          name: 'Protagonista',
+          days: 5,
+          level: 2,
+        },
+        {
+          name: 'Protagonista2',
+          days: 5,
+          level: 2,
+        },
+        {
+          name: 'Protagonista3',
+          days: 5,
+          level: 2,
+        },
+        {
+          name: 'Protagonista',
+          days: 5,
+          level: 2,
+        },
+        {
+          name: 'Protagonista2',
+          days: 5,
+          level: 2,
+        },
+        {
+          name: 'Protagonista3',
+          days: 5,
+          level: 2,
+        },
+        {
+          name: 'Protagonista',
+          days: 5,
+          level: 2,
+        },
+        {
+          name: 'Protagonista2',
+          days: 5,
+          level: 2,
+        },
+        {
+          name: 'Protagonista3',
+          days: 5,
+          level: 2,
+        },
+        {
+          name: 'Protagonista',
+          days: 5,
+          level: 2,
+        },
+        {
+          name: 'Protagonista2',
+          days: 5,
+          level: 2,
+        },
+        {
+          name: 'Protagonista3',
+          days: 5,
+          level: 2,
+        },
+      ],
+    };
+  },
+  methods: {
+    back() {
+      this.$router.push({ path: '/MainMenu' });
+    },
+  },
 };
 </script>
 
 <style>
-.save {
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 40px;
-  padding-right: 15px;
-}
+
 </style>

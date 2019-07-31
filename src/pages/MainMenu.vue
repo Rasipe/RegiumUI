@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center">
-    <div class="form" style="width: 250px">
+    <div class="form q-pa-lg" style="width: 250px">
       <q-form class="q-gutter-md">
           <div class="row">
         <div class="col">

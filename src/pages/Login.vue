@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <h1>Regium</h1>
-    <div class="form">
+    <div class="form q-pa-lg">
       <q-form class="q-gutter-md">
         <q-input dark outlined v-model="text" label="usuario" color="yellow" type="text"/>
         <q-input dark outlined v-model="password" type="password" label="Senha" color="yellow" />
