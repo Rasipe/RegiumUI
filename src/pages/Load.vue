@@ -20,7 +20,7 @@
         :days="save.days"
         :level="save.level"
         :name="save.name"
-        @load="router('main')"
+        @load="router('game')"
         />
     </div>
     </q-scroll-area>

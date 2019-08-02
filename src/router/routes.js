@@ -1,4 +1,3 @@
-
 const routes = [
   {
     path: '/',
@@ -13,7 +12,11 @@ const routes = [
     path: '/main',
     component: () => import('layouts/Main.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') },
+      { path: '/game', component: () => import('pages/Game.vue') },
+      { path: '/inventor', component: () => import('pages/Inventor.vue') },
+      { path: '/feature', component: () => import('pages/Feature.vue') },
+      { path: '/spell', component: () => import('pages/Spell.vue') },
+      { path: '/group', component: () => import('pages/Group.vue') },
     ],
   },
 ];

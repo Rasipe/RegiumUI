@@ -14,8 +14,8 @@
 
         <q-toolbar-title class="row">
           <q-item-label class="col">{{protagonist}}</q-item-label>
-          <q-item-label class="col">level {{level}}</q-item-label>
-          <q-item-label class="col">days {{days}}</q-item-label>
+          <q-item-label class="col gt-sm">level {{level}}</q-item-label>
+          <q-item-label class="col gt-sm">days {{days}}</q-item-label>
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
@@ -31,11 +31,13 @@
           active-bg-color="yellow-5"
           indicator-color="black"
         >
-          <q-tab name="game" icon="videogame_asset" label="Jogo"/>
-          <q-tab name="inventor" icon="store" label="Inventario" />
-          <q-tab name="feature" icon="book" label="Características" />
-          <q-tab name="spell" icon="star" label="Feitiço" />
-          <q-tab name="group" icon="group" label="Grupo" />
+          <q-route-tab name="game" icon="videogame_asset" label="Jogo" to="/game"/>
+          <q-route-tab name="inventor" icon="store" label="Inventario" to="/inventor"/>
+          <q-route-tab name="feature" icon="book" label="Características" to="/feature"/>
+          <q-route-tab name="spell" icon="star" label="Feitiço" to="/spell"/>
+          <q-route-tab name="group" icon="group" label="Grupo" to="/group"/>
+          <q-route-tab name="diary" icon="library_books" label="Missões" to="/game"/>
+          <q-route-tab name="travel" icon="location_on" label="Viajar" to="/game"/>
         </q-tabs>
     </q-drawer>
 
@@ -46,21 +48,16 @@
 </template>
 
 <script>
-import { openURL } from 'quasar';
-
 export default {
-  name: 'MyLayout',
+  name: 'Main',
   data() {
     return {
       protagonist: 'Protagonista',
       level: 0,
       days: 0,
       tab: 'game',
-      leftDrawerOpen: this.$q.platform.is.desktop,
+      leftDrawerOpen: false,
     };
-  },
-  methods: {
-    openURL,
   },
 };
 </script>

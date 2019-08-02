@@ -53,7 +53,8 @@ module.exports = function (ctx) {
         'QScrollArea',
         'QTabs',
         'QTab',
-        'QRouteTab'
+        'QRouteTab',
+        'QScrollArea'
       ],
 
       directives: [
