@@ -10,8 +10,8 @@ const routes = [
     ],
   },
   {
-    path: '/Index',
-    component: () => import('layouts/MyLayout.vue'),
+    path: '/main',
+    component: () => import('layouts/Main.vue'),
     children: [
       { path: '', component: () => import('pages/Index.vue') },
     ],
