@@ -5,7 +5,7 @@
       dense
       round
       aria-label="Back"
-      @click="back()"
+      @click="router('mainmenu')"
       class="q-mb-md"
       >
         <q-icon name="arrow_back" size="300%"/>
@@ -20,7 +20,7 @@
         :days="save.days"
         :level="save.level"
         :name="save.name"
-        @load="back"
+        @load="router('main')"
         />
     </div>
     </q-scroll-area>
@@ -117,8 +117,8 @@ export default {
     };
   },
   methods: {
-    back() {
-      this.$router.push({ path: '/MainMenu' });
+    router(layout) {
+      this.$router.push({ path: layout });
     },
   },
 };
